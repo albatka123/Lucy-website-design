@@ -82,10 +82,35 @@ a {
     height: 20px;
     border-radius: 50%;
     background: #fff;
+    box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
+}
+
+.section__heading {
+    color: #000958;
+    font-family: Sora;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.19;
+}
+
+.section__desc {
+    margin-top: 24px;
+    color: #656689;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.87;
 }
 /* ========== HEADER =========== */
 .header {
     padding: 26px 0;
+    background: #fffaf5;
+}
+
+.header--fixer {
+    opacity: 0.8;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header__inner {
@@ -107,7 +132,8 @@ a {
     line-height: 1;
 }
 
-.navbar__link:hover {
+.navbar__link:hover,
+.header-action__link:hover {
     text-shadow: 1px 0 0 currentColor;
     color: #000958;
 }
@@ -273,4 +299,68 @@ a {
     font-weight: 500;
     line-height: 1;
     text-decoration: underline;
+}
+/* ================ ABOUT =============== */
+.about {
+    margin-top: 187px;
+    padding: 20px 0;
+}
+
+.about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about__label {
+    color: #5e6085;
+    font-family: Sora, sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.about__heading {
+    margin-top: 15px;
+}
+
+.about__heading,
+.about__desc {
+    width: 444px;
+}
+
+.about__checklist {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    gap: 36px;
+}
+
+.about__check-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #48496a;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+}
+
+.about__check-item::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: #ff5d31;
+    box-shadow: 0 4px 15px -3px rgba(255, 93, 49, 0.69);
+}
+
+.about__check-item::after {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    content: url(../img/check.svg);
 }
